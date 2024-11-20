@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  color: var(--color-light);
+  background-color: var(--color-darkest);
+  padding: 3.2rem;
+}
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  width: 50rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-header {
+  width: 66rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+ 
+}
+
+
+.app-header img {
+  height: 70px; 
+  width: auto; 
+  margin-right: 30px;
+}
+
+h1 {
+  font-family: "Codystar";
+  font-size: 5.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  margin-top: -20px;
+}
+h3{
+  font-size: 13px;
+}
+
+.quiz-container {
+  text-align: start;
+  max-height: 380px; 
+  overflow-y: scroll; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #3a4556;
+}
+
+.quiz-container::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.quiz-container::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px;
+}
+
+.quiz-options{
+  margin-top: 10px;
+}
+
+
+.option {
+  margin-bottom: 10px;
+  font-size: 12.5px;
+  margin-left: 12px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#quest {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.score{
+  margin: 10px;
+  font-size: 15px;
+}
+.start{
+  text-align: center;
+}
+.radio{
+  margin-right: 4px;
 }
