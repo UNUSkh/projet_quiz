@@ -12,7 +12,7 @@ function Quiz() {
             id: "1",
         },
         {
-            question: "Quel est le rôle principal du Product Owner dans une équipe Scrum ?",
+            question: "Quel le  rôle principal du Product Owner dans une équipe Scrum ?",
             options: [
                 "Éliminer les obstacles rencontrés par l'équipe",
                 "Prioriser et gérer le Product Backlog",
