@@ -7,7 +7,7 @@ function StartScreen() {
         <context.Provider value={[score,setscore]}>
             <div className="start">
 
-                <h2>Welcome to The React Quiz!</h2>
+                <h2>Welcome to The Agility Quiz!</h2>
                 <div className="score"><p>Réponses: {score}/10</p></div>
 
                 <Quiz></Quiz>
