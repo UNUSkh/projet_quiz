@@ -75,7 +75,7 @@ function Quiz() {
                                         type="radio" 
                                         name={`question-${q.id}`} 
                                         value={option}
-                                        checked={answers[q.id] === option} // Check if the option is selected
+                                        checked={answers[q.id] === option} 
                                         onChange={() => handleRadioChange(q.id, option)}
                                     />
                                     {option}
