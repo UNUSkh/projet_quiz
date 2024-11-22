@@ -3,12 +3,12 @@ import { context } from "./Startscreen";
 
 function Quiz() {
     const [score, setScore] = useContext(context); 
-    const [answers, setAnswers] = useState({}); // Stockage des réponses de l'utilisateur
-    const [textareaAnswered, setTextareaAnswered] = useState(false); // État pour la zone de texte
-    const [inputValue, setInputValue] = useState(""); // Valeur de la zone de texte
-    const [showResults, setShowResults] = useState(false); // Affichage des résultats
+    const [answers, setAnswers] = useState({}); // stockage des reponses de l'utilisateur
+    const [textareaAnswered, setTextareaAnswered] = useState(false); // etat pour la zone de texte
+    const [inputValue, setInputValue] = useState(""); // valeur de la zone de texte
+    const [showResults, setShowResults] = useState(false); // affichage des resultats
 
-    // Questions et réponses correctes
+    // questions 
     const questions = [
         {
             question: "Quelle cérémonie Scrum permet de définir les tâches du sprint à venir ?",
@@ -81,7 +81,7 @@ function Quiz() {
             id: "9",
         },
     ];
-
+    //reponses correctes
     const correctAnswers = {
         1: "Sprint Planning",
         2: "Prioriser et gérer le Product Backlog",
@@ -104,7 +104,7 @@ function Quiz() {
         });
     };
 
-    // Gestion de la zone de texte
+    // gestion input texte
    const handleInputChange = (e) => {
         const value = e.target.value;
         setInputValue(value);
@@ -122,7 +122,7 @@ function Quiz() {
         }
     };
 
-    // Calcul du score final
+    // calcul du score final
     const calculateFinalScore = () => {
         let finalScore = 0;
 
@@ -137,13 +137,13 @@ function Quiz() {
         setScore(finalScore);
     };
 
-    // Gestion de la soumission du quiz
+    // gestion de la soumission du quiz
     const handleSubmit = () => {
         calculateFinalScore();
         setShowResults(true);
     };
 
-    // Reinitialisation du quiz
+    // reinitialisation du quiz
     const resetQuiz = () => {
         setAnswers({});
         setScore(0);
@@ -195,13 +195,13 @@ function Quiz() {
                             }}
                         />
                     </div>
-                    <button onClick={handleSubmit}>Soumettre le quiz</button>
+                    <button className="button" onClick={handleSubmit}>Soumettre le quiz</button>
                 </>
             ) : (
                 <div className="results">
-                    <h3>Votre score est : {score}/{questions.length }</h3>
-                   
-                    <button onClick={resetQuiz}>Recommencer</button>
+                    <p className="scoraff"><b>Votre score est : {score}/{questions.length }</b></p>
+                    
+                    <button className="button" onClick={resetQuiz}>Recommencer</button>
                 </div>
             )}
         </div>
@@ -209,3 +209,18 @@ function Quiz() {
 }
 
 export default Quiz;
+/**
+ * {questions.map((q) => (
+                    <div className="rep" key={q.id}>
+                        <b>{q.id}- {q.question}</b>
+                        <p>-Votre réponse : {answers[q.id] || "Non répondu"}.</p>
+                        <p>-Bonne réponse : {correctAnswers[q.id]}.</p>
+                    </div>
+                ))}
+                <h3>10- Quels sont, selon vous, les inconvénients potentiels d'une approche Kanban ?</h3>
+                <div className="rep" >
+                        <b>{q.id}- {q.question}</b>
+                        <p>-Votre réponse : {answers[q.id] || "Non répondu"}.</p>
+                        <p>-Bonne réponse : {correctAnswers[q.id]}.</p>
+                    </div>
+ */

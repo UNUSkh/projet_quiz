@@ -110,9 +110,48 @@ input[type="checkbox"] {
   margin: 10px;
   font-size: 15px;
 }
+.scoraff{
+  margin: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 .start{
   text-align: center;
 }
 .radio{
   margin-right: 4px;
 }
+.rep{
+  font-size: 13px;
+  margin-bottom: 5px;
+  
+}
+
+.button {
+  background-color: #3b7294; 
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 14px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+
+.button:hover {
+  background-color: #2980b9; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+
+.button:active {
+  background-color: #2c688d; 
+  transform: translateY(0);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
